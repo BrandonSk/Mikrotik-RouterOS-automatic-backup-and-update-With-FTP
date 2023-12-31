@@ -6,7 +6,7 @@ This script allows you to generate daily backups of MikroTik and send them to an
 > 💡 If you have any ideas about the script or you just want to share your opinion, you are welcome to [Discussions](https://github.com/beeyev/Mikrotik-RouterOS-automatic-backup-and-update/discussions), or you can open an [issue](https://github.com/beeyev/Mikrotik-RouterOS-automatic-backup-and-update/issues) if you found a bug.
 
 
-# (S)FTP v2 fork
+# (S)FTP
 
 ## Added features:
 - Ability to store backups via FTP or SFTP
