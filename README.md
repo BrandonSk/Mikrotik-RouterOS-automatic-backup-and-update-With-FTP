@@ -2,7 +2,7 @@
 
 This script provides an ability to create Mikrotik's daily backups to email. You can also enable automatic RouterOS upgrade or leave only notifications about new firmware versions.
 
-# (S)FTP v2 fork
+# (S)FTP
 
 ## Added features:
 - Ability to store backups via FTP or SFTP
