@@ -1,6 +1,10 @@
 # Mikrotik RouterOS automatic backup and update
 
-This script provides an ability to create Mikrotik's daily backups to email. You can also enable automatic RouterOS upgrade or leave only notifications about new firmware versions.
+This script allows you to generate daily backups of MikroTik and send them to an email address. You can also choose to enable automatic RouterOS upgrades or receive notifications exclusively for new firmware versions.
+
+
+> 💡 If you have any ideas about the script or you just want to share your opinion, you are welcome to [Discussions](https://github.com/beeyev/Mikrotik-RouterOS-automatic-backup-and-update/discussions), or you can open an [issue](https://github.com/beeyev/Mikrotik-RouterOS-automatic-backup-and-update/issues) if you found a bug.
+
 
 # (S)FTP v2 fork
 
@@ -23,14 +27,13 @@ FTP parameters:
 ### The rest of the original README:
 
 ## Features:
-- Ability to choose script operating mode according to your needs. *(Read below)*
-- Script creates backups of the whole system and exported config.
-- You can set a preferred update channel.
-- If automatic updates are enabled, you can set script to install only patch versions of RouterOS updates. *This means if the current RouterOS version is v6.43.6, the script will automatically install v6.43.7 (new patch version) but not v6.44.0 (new minor version), for example.*
-- Script includes primary information about the device into the email message. So you can easily find the backup you need among multiple devices.
-- For safety purposes, an automatic update process will not be started if script could not send backups to email.
-- Routerboard firmware can be automatically upgraded according to the installed RouterOS version.
-
+- Choose the script's operating mode based on your specific requirements. (See details below)
+- The script generates backups of the entire system and exports the configuration.
+- Customize your preferred update channel.
+- When automatic updates are enabled, you can configure the script to install only patch versions of RouterOS updates. *For example, if the current RouterOS version is v6.43.6, the script will automatically install v6.43.7 (a new patch version) but not v6.44.0 (a new minor version).*
+- The script includes essential device information into the email message, making it easy to identify the required backup among multiple devices.
+- As a safety measure, the automatic update process will not initiate if the script is unable to send backups via email.
+- Routerboard firmware can be upgraded automatically based on the installed RouterOS version.
 
 ## Script operating modes:
 **Backups only** - script creates system and config backups and sends them to specified email as an attachment. Using email account as storage for your backups.  
@@ -38,15 +41,18 @@ FTP parameters:
 **Backups and automatic RouterOS upgrade** - Script makes a backup, then checks for new RouterOS version, and if new firmware released, script will initiate upgrade process. By the end, you receive two emails. The first one contains system backups of the previous RouterOS version, the second message will be sent when the upgrade process is done (including backups of the updated system).
 
 ## How to use
+> ❗️ **Important**  
+> Make sure that your device identity does not contain any spaces or specific symbols! `System -> Identity`
+
 ##### 1. Configure parameters
 Take the  [script](https://github.com/beeyev/Mikrotik-RouterOS-automatic-backup-and-update/raw/master/BackupAndUpdate.rsc) and configure it's parameters at the begining of the file.  
 This is not difficult because all parameters are well commented.  
-**Imprtant!** Don't forget to provide correct email address for backups and pay attention a `scriptMode` variable.
+**Important!** Don't forget to provide correct email address for backups and pay attention a `scriptMode` variable.
 
 ##### 2. Create new script
 System -> Scripts [Add]  
 
-**Imprtant!** Script name has to be `BackupAndUpdate`   
+**Important!** Script name has to be `BackupAndUpdate`   
 Put the script which you configured earlier into the source area.  
 ![](https://github.com/beeyev/Mikrotik-RouterOS-automatic-backup-and-update/raw/master/howto/script-name.png)  
 
@@ -76,6 +82,10 @@ Or you can use this command to create the task:
 When everything is done, you need to make sure that the script is working correctly.  
 To do so, open a New Terminal and Log window in your WinBox, then run the script manually by executing this command `/system script run BackupAndUpdate;` in Terminal.  
 You will see the script working process in the log window. If the script finished without errors, check your email, there is a fresh message with backups from your MikroTik waiting for you 🎉
+
+## Contributors
+
+ - DJ5KP, website: [dj5kp.de](http://dj5kp.de/)
 
 ## License
 
