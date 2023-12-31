@@ -12,9 +12,10 @@
 # You can contact me by e-mail at tebiev@mail.com
 #
 # Fork author: Branislav Susila (https://github.com/BrandonSk)
-
+# Updated: 31/12/2023 - merged updates from original script
 # IMPORTANT!
 # Minimum supported RouterOS version is v6.43.7; for SFTP 6.47.4 (bug fix)
+# (updates tested only on RouterOS 7.12+)
 #
 #----------MODIFY THIS SECTION AS NEEDED----------------------------------------
 ##
