@@ -73,16 +73,6 @@
 #               Change parameter `forceBackup` if you need the script to create backups every time when it runs.
 :local scriptMode "osupdate";
 
-## Additional parameter if you set `scriptMode` to `osupdate` or `osnotify`
-# Set `true` if you want the script to perform backup every time it's fired, whatever script mode is set.
-:local forceBackup false;
-
-## Backup encryption password, no encryption if no password.
-:local backupPassword ""
-
-## If true, passwords will be included in exported config.
-:local sensitiveDataInConfig true;
-
 ## Update channel. Possible values: stable, long-term, testing, development
 :local updateChannel "stable";
 
